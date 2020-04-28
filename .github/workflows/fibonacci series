@@ -1,0 +1,11 @@
+from functools import lru_cache
+@lru_cache(maxsize=1000)
+def fibo(a):
+ if (a==1 or a==2):
+   return 1
+ else:
+   return fibo(a-1)+fibo(a-2)
+
+
+for i in range(1,int(input("Enter the lenght of fibonacci series:"))+1):
+ print(f"{i} number is :{fibo(i)}")
