@@ -1,0 +1,15 @@
+import math
+
+def pascal(a):
+  k=a
+  for i in range(a):
+    print(' '*k,end=" ")
+    k-=1
+    for j in range (i):
+       
+      print(int(math.factorial(i)/(math.factorial(j)*math.factorial(i-j))),end=' ' )
+    
+    print(1,'\n')
+
+a=int(input("Enter the length of pascal triangle "))  
+pascal(a)
