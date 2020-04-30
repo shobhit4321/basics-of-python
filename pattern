@@ -1,0 +1,26 @@
+def pattern_gen(s, rows, cols):
+  """
+  Inputs:
+    s : string of length 1, character that will be repeated in the pattern
+    rows: int, Number of cells in a row
+    cos : int, Number of cells in a column
+  """
+
+  n=3*int(rows)+1
+  m=5*int(cols)+1
+
+  for i in range(n):
+   for j in range(m):
+     
+
+     if (j==0 or j%5==0):
+      print ("|",end='')
+     elif (i==0 or i%3==0):
+      print ("-",end='')
+
+     
+
+     else:
+      print(s,end="")
+     
+   print()
