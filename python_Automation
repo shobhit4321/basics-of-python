@@ -1,0 +1,16 @@
+from bs4 import BeautifulSoup
+import  requests
+url='https://www.flipkart.com/food-nutrition/~cs-63f4zjkit5/pr?sid=7jv&collection-tab-name=Rice%2C%20Atta%2C%20Pulses%20And%20More&otracker=\\
+hp_banner_1_5.bannerX3.BANNER_7CFE71G2481X&fm=neo%2Fmerchandising&iid=\\
+M_bf1f10b5-090c-4f1f-bab5-f0e6c174350e_5.7CFE71G2481X&ssid=j2oxlqfjk00000001588265294392'
+response=requests.get(url)
+soup=BeautifulSoup(response.text,'lxml')
+items=soup.find_all('div',class_='_3liAhj')
+count=1
+for i in items:
+ itemName=i.find(class_='_2cLu-l').text
+ itemprice=i.find(class_='_1vC4OE').text
+ print(f'{count} Name:{itemName} price:{itemprice}')
+
+
+ count=count+1
