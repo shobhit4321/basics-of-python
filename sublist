@@ -1,0 +1,13 @@
+def sub_index(a):
+ a1=[a[0]]
+ a2=[] 
+ for i in range(1,len(a)):
+  if (a[i]==a[i-1]):
+    a1+=[a[i]]
+  else:  
+    a2+=[a1] 
+    a1=[a[i]]
+  
+ return a2+[a1]   
+ 
+ #sub_index([1,1,1,2,2,3,3,3,4,4])
