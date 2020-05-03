@@ -1,0 +1,11 @@
+def triangle_pattern():
+ k=int(input('Enter the lenght of the triangle : '))
+ for i in range(k+1):
+  for j in range (i):
+   print('*',end='')
+  print('\n')
+
+
+triangle_pattern()
+
+
