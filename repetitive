@@ -1,0 +1,14 @@
+def repetitive(a):
+  b=[]
+  for i  in a:
+   if( i not in b):
+    b+=[i]
+  #a=list(set(a))
+  return b
+repetitive([1,1,1,2,2])
+
+
+'''def repetitive(a):
+  a=list(set(a))
+  return a
+repetitive([1,1,1,2,2])'''
