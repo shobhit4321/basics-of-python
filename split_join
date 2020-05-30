@@ -1,0 +1,2 @@
+Input = 'python is so easy to use'
+'-'.join(Input.split(' '))
